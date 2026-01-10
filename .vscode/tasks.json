@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build Two sum Leetcode 1.c++",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"Two sum Leetcode 1.c++",
+				"-o",
+				"TwoSumLeetcode1.exe"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "run Two sum Leetcode 1.c++",
+			"type": "shell",
+			"command": "TwoSumLeetcode1.exe",
+			"dependsOn": [
+				"build Two sum Leetcode 1.c++"
+			]
+		},
+		{
+			"label": "build Two sum Leetcode 1.c++",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"Two sum Leetcode 1.c++",
+				"-o",
+				"TwoSumLeetcode1.exe"
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		}
+	]
+}

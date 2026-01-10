@@ -31,5 +31,6 @@ int main() {
 	} else {
 		cout << "No solution found." << endl;
 	}
+	
 	return 0;
 }
