@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+using namespace std;
+
+bool containsDuplicate(vector<int>& nums) {
+	unordered_set<int> seen;
+	for (int num : nums) {
+		if (seen.count(num)) return true;
+		seen.insert(num);
+	}
+	return false;
+}
+
+int main() {
+	int n;
+	cout << "Enter number of elements: ";
+	cin >> n;
+	vector<int> nums(n);
+	cout << "Enter elements: ";
+	for (int i = 0; i < n; ++i) {
+		cin >> nums[i];
+	}
+	if (containsDuplicate(nums)) {
+		cout << "True (Contains duplicate)" << endl;
+	} else {
+		cout << "False (No duplicate)" << endl;
+	}
+	return 0;
+}
